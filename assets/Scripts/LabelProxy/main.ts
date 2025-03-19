@@ -12,15 +12,17 @@ export default class main extends cc.Component {
     @property({ type: cc.Prefab, tooltip: '' })
     prefabAvatar: cc.Prefab = null;
 
-    @property({type:cc.Node,tooltip:''})
-    nodeParent:cc.Node = null;
+    @property({ type: cc.Node, tooltip: '' })
+    nodeParent: cc.Node = null;
+
+    private m_avatarCount: number = 100;
 
 
     private m_charList: string = "abcdefghijklmnopqrstuvwxyz";
 
     start() {
         this.spawnPrefabName();
-        this.spawnPrefabAvatar();
+        this.spawnPrefabAvatar();       
     }
 
     private spawnPrefabName() {
@@ -34,7 +36,7 @@ export default class main extends cc.Component {
     }
 
     private spawnPrefabAvatar() {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < this.m_avatarCount; i++) {
             let node = cc.instantiate(this.prefabAvatar);
             node.setPosition(this.getRandomPos());
             node.parent = this.nodeParent;

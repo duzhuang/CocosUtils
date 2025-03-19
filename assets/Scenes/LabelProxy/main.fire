@@ -432,7 +432,8 @@
     "labelContainer": {
       "__id__": 7
     },
-    "sortType": 0,
+    "sortType": 2,
+    "isOpenDebug": true,
     "_id": "3adn8zWhFANKli5cH638+y"
   },
   {
@@ -5279,6 +5280,7 @@
       "__id__": 151
     },
     "sortType": 0,
+    "isOpenDebug": false,
     "_id": "29GD4mPEpEt4BEZmu7YtsR"
   },
   {

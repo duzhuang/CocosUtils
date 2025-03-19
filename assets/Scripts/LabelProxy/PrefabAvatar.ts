@@ -18,11 +18,31 @@ export default class PrefabAvatar extends cc.Component {
 
     private m_proxyNode: cc.Node = null;
 
+    private m_sign: number = 0;
+
     start() {
 
     }
 
+    protected update(dt: number): void {
+        this.node.position = this.getRandomPos();
+        this.m_labelProxyManager.refreshLabel(this.lblName, this.m_proxyNode);
+
+        if(Math.floor(Math.random() * 1000)  === this.m_sign) {            
+            this.m_labelProxyManager.unregisterLabel(this.m_proxyNode);
+            this.node.destroy();
+        }
+    }
+
+    private getRandomPos(): cc.Vec3 {
+        let result = cc.Vec3.ZERO;
+        result.x = (Math.random() * cc.winSize.width / 2) * (Math.random() < 0.5 ? -1 : 1);
+        result.y = (Math.random() * cc.winSize.height / 2) * (Math.random() < 0.5 ? -1 : 1);
+        return result;
+    }
+
     public setAvatar(index: number, name: string) {
+        this.m_sign = index;
         this.setIcon(index);
         this.setName(name);
     }
