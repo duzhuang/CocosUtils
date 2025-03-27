@@ -1,0 +1,132 @@
+
+Middle_purplecrab.png
+size: 513,106
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ZSpangxie_Ajio1
+  rotate: true
+  xy: 182, 2
+  size: 33, 54
+  orig: 35, 56
+  offset: 1, 1
+  index: -1
+ZSpangxie_Atui1
+  rotate: false
+  xy: 386, 3
+  size: 33, 34
+  orig: 33, 34
+  offset: 0, 0
+  index: -1
+ZSpangxie_Atui2
+  rotate: false
+  xy: 421, 3
+  size: 33, 34
+  orig: 33, 34
+  offset: 0, 0
+  index: -1
+ZSpangxie_Bjio1
+  rotate: true
+  xy: 294, 5
+  size: 30, 44
+  orig: 32, 46
+  offset: 1, 1
+  index: -1
+ZSpangxie_Bjio2
+  rotate: true
+  xy: 340, 5
+  size: 30, 44
+  orig: 32, 46
+  offset: 1, 1
+  index: -1
+ZSpangxie_Btui1
+  rotate: false
+  xy: 456, 10
+  size: 17, 32
+  orig: 17, 32
+  offset: 0, 0
+  index: -1
+ZSpangxie_Btui2
+  rotate: true
+  xy: 475, 31
+  size: 17, 32
+  orig: 17, 32
+  offset: 0, 0
+  index: -1
+ZSpangxie_jio2
+  rotate: true
+  xy: 238, 3
+  size: 32, 54
+  orig: 34, 56
+  offset: 1, 1
+  index: -1
+ZSpangxie_ke
+  rotate: false
+  xy: 118, 37
+  size: 128, 69
+  orig: 130, 71
+  offset: 1, 1
+  index: -1
+ZSpangxie_qianxian1
+  rotate: true
+  xy: 460, 50
+  size: 56, 53
+  orig: 57, 53
+  offset: 0, 0
+  index: -1
+ZSpangxie_qianzi1
+  rotate: true
+  xy: 248, 37
+  size: 69, 110
+  orig: 71, 112
+  offset: 1, 1
+  index: -1
+ZSpangxie_qianzi2
+  rotate: true
+  xy: 360, 62
+  size: 44, 90
+  orig: 46, 92
+  offset: 1, 1
+  index: -1
+ZSpangxie_sanguang
+  rotate: false
+  xy: 422, 44
+  size: 36, 16
+  orig: 40, 28
+  offset: 2, 7
+  index: -1
+ZSpangxie_shengti
+  rotate: false
+  xy: 0, 2
+  size: 116, 104
+  orig: 116, 104
+  offset: 0, 0
+  index: -1
+ZSpangxie_xian
+  rotate: false
+  xy: 118, 3
+  size: 62, 32
+  orig: 62, 32
+  offset: 0, 0
+  index: -1
+ZSpangxie_yanjing1
+  rotate: true
+  xy: 360, 39
+  size: 21, 29
+  orig: 23, 31
+  offset: 1, 1
+  index: -1
+ZSpangxie_yanjing2
+  rotate: true
+  xy: 391, 39
+  size: 21, 29
+  orig: 23, 31
+  offset: 1, 1
+  index: -1
+ZSpangxie_zuiba
+  rotate: false
+  xy: 456, 0
+  size: 17, 8
+  orig: 19, 10
+  offset: 1, 1
+  index: -1
