@@ -12,9 +12,9 @@ export abstract class TableViewMain extends cc.Component {
         this.scrollView.getComponent(TableView).init([
             { name: '1' },
             { name: '2' },
-            { name: '3' },
-            { name: '4' },
-            { name: '5' },
+            { name: '3' },   
+            { name: '4' },  
+            { name: '5' },     
             { name: '6' },
             { name: '7' },
             { name: '8' },
@@ -27,10 +27,7 @@ export abstract class TableViewMain extends cc.Component {
             { name: '15' },
             { name: '16' },
             { name: '17' },
-
-        ])
-
-        this.scrollView.getComponent(TableView).scrollToTop();
+        ])                       
     }
 
     onClickAdd() {

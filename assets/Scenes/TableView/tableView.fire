@@ -418,7 +418,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        -101.234,
+        0,
         0,
         0,
         0,
@@ -481,7 +481,7 @@
     "node": {
       "__id__": 6
     },
-    "_enabled": false,
+    "_enabled": true,
     "_materials": [
       {
         "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
@@ -520,6 +520,7 @@
       "__uuid__": "6a018f6e-378f-4e9b-956b-2e3c2760aa6b"
     },
     "cellSpacing": 5,
+    "scrollModel": 0,
     "_id": "ebMGJ8jcFC078QUi1v7gE0"
   },
   {
