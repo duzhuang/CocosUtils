@@ -22,12 +22,13 @@ export default class TableView extends cc.ScrollView {
     private _lastContentPos: number = 0;
     private _isVertical: boolean = true; // 当前只支持垂直滚动
 
-    protected start(): void {
-        this.node.on("scrolling", this._onScrolling, this);
+    protected onLoad(): void {
+        this.node.on("scrolling", this._onScrolling, this);      
     }
 
     protected onDestroy(): void {
-        this.node.off("scrolling", this._onScrolling, this);
+        this.node.off("scrolling", this._onScrolling, this);       
+        this._cellPool.clear();
     }
 
     /**
@@ -175,5 +176,15 @@ export default class TableView extends cc.ScrollView {
             this._updateVisibleCells();
             this._lastContentPos = this.getScrollOffset().y;
         }
+    }
+
+    scrollToTop() {        
+        super.scrollToTop();
+        this._updateVisibleCells();
+    }
+
+    scrollToBottom() {        
+        super.scrollToBottom();
+        this._updateVisibleCells();
     }
 }
