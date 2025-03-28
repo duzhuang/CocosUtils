@@ -150,9 +150,9 @@ export default class TableView extends cc.ScrollView {
         //需要根据锚点的位置来进行计算
         if (this._isVertical) {
             const contentAnchor = this.content.anchorY;
-            const offTop = this.content.height * (1 - contentAnchor);
+            const basePosition = this.content.height * (1 - contentAnchor);
             const anchor = this.cellPrefab.data.anchorY;            
-            cell.y = -index * cellHeight - this._cellSize.height * anchor + offTop ;
+            cell.y = -index * cellHeight - this._cellSize.height * anchor + basePosition ;          
         }
     }
 
