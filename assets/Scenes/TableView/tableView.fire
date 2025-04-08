@@ -504,7 +504,7 @@
     "_enabled": true,
     "horizontal": false,
     "vertical": true,
-    "inertia": true,
+    "inertia": false,
     "brake": 0.5,
     "elastic": true,
     "bounceDuration": 1,
