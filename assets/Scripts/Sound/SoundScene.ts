@@ -14,7 +14,7 @@ export default class SoundScene extends cc.Component {
     }
 
     protected start(): void {
-        GameSoundController.instance.playMusic("BGM");
+        GameSoundController.instance.playMusicSync("BGM");
     }
 
     private registerEvent(): void {
@@ -42,15 +42,15 @@ export default class SoundScene extends cc.Component {
     }
 
     private btnClickSound() {
-        GameSoundController.instance.playEffect("CLICK_CONFIRM");
+        GameSoundController.instance.playEffectSync("CLICK_CONFIRM");
     }
 
     private btnLevelUpSound() {
-        GameSoundController.instance.playEffect("LEVEL_UP");
+        GameSoundController.instance.playEffectSync("LEVEL_UP");
     }
 
     private btnNormalSound() {
-        GameSoundController.instance.playEffect("CONGRATES_NORMAL");
+        GameSoundController.instance.playEffectSync("CONGRATES_NORMAL");
     }
 }
 

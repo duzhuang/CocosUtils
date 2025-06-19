@@ -18,8 +18,8 @@ export default class SoundController {
     private m_isEffectOn: boolean = false;
 
     constructor() {
-        this.getMusicConfig();
-        this.getEffectConfig();
+        this.setMusic(this.getMusicConfig());
+        this.setEffect(this.getEffectConfig());        
     }
 
     /**
@@ -45,7 +45,7 @@ export default class SoundController {
             cc.sys.localStorage.setItem(configName, 'true');
             return true;
         }
-        return config == 'true';
+        return config === 'true';
     }
 
     /**

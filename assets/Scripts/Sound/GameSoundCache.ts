@@ -37,6 +37,24 @@ export default class GameSoundCache {
         })
     }
 
+    public async getAudioClipSync(path: string): Promise<cc.AudioClip> {
+        if (this.m_soundMap.has(path)) {
+            return this.m_soundMap.get(path)!;
+        }
+
+        return new Promise((resolve, reject) => {
+            cc.loader.loadRes(path, cc.AudioClip, (err, audioClip) => {
+                if (err) {
+                    console.error(err);
+                    reject(err); // 添加错误 reject
+                    return;
+                } 
+                this.m_soundMap.set(path, audioClip);
+                resolve(audioClip as cc.AudioClip);
+            })
+        })
+    }
+
     /**
      * 清除缓存
      */

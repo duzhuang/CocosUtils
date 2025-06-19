@@ -35,6 +35,12 @@ export default class GameSoundController {
         })
     }
 
+    public async playMusicSync(audioName: keyof typeof GameSoundController.AUDIO_CONFIG) {
+        const audioUrl = "Sounds/" + GameSoundController.AUDIO_CONFIG[audioName];
+        const audioClip = await GameSoundCache.instance.getAudioClipSync(audioUrl);
+        SoundController.instance.playMusic(audioClip, true);
+    }
+
     public playEffect(audioName: keyof typeof GameSoundController.AUDIO_CONFIG) {
         const audioUrl = "Sounds/" + GameSoundController.AUDIO_CONFIG[audioName];
         GameSoundCache.instance.getAudioClip(audioUrl, (audioClip) => {
@@ -44,6 +50,12 @@ export default class GameSoundController {
             }
             SoundController.instance.playEffect(audioClip, false);
         })
+    }
+
+    public async playEffectSync(audioName: keyof typeof GameSoundController.AUDIO_CONFIG) {
+        const audioUrl = "Sounds/" + GameSoundController.AUDIO_CONFIG[audioName];
+        const audioClip = await GameSoundCache.instance.getAudioClipSync(audioUrl);
+        SoundController.instance.playEffect(audioClip, false);
     }
 }
 
