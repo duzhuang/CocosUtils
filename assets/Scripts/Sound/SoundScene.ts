@@ -49,8 +49,13 @@ export default class SoundScene extends cc.Component {
         GameSoundController.instance.playEffectSync("LEVEL_UP");
     }
 
-    private btnNormalSound() {
+    private btnNormalSound(e,data) {
+        console.log("btnNormalSound",e);
         GameSoundController.instance.playEffectSync("CONGRATES_NORMAL");
+    }
+
+    private btnDoubleClickSound(e, data) {
+        GameSoundController.instance.playEffectSync("CONGRATES_DOUBLE");
     }
 }
 
