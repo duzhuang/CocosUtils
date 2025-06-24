@@ -1,5 +1,8 @@
 const { ccclass, menu, property } = cc._decorator;
 
+/**
+ * 按钮双击
+ */
 @ccclass
 @menu("Plugin/CocosCom/ButtonDoubleClick")
 export default class ButtonDoubleClick extends cc.Component {
