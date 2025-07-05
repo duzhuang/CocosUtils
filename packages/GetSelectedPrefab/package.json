@@ -1,0 +1,12 @@
+{
+    "name": "GetSelectedPrefab",
+    "version": "0.0.1",
+    "description": "Custom right-click menu",
+    "author": "DX",
+    "main": "src/main.js",
+    "main-menu": {
+        "extensions/GetSelectedPrefab": {
+            "message": "custom-right-click:processGetSelectedPrefab"            
+        }
+    }
+}

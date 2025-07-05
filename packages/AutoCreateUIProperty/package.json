@@ -1,0 +1,12 @@
+{
+    "name": "AutoCreateUIProperty",
+    "version": "0.0.1",
+    "description": "Custom right-click menu",
+    "author": "DX",
+    "main": "src/main.js",
+    "main-menu": {
+      "DX/Scripts/AutoCreateUIProperty": {
+        "message": "custom-right-click:processAutoCreateUIProperty"
+      }
+    }
+}
