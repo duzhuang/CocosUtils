@@ -47,33 +47,12 @@ module.exports = {
                 if (err) {
                     Editor.log("属性绑定失败", err);
                 } else {
-                    Editor.log("属性绑定成功");                   
+                    Editor.log("属性绑定成功"); 
                 }
             })
         }
     },
 
-    /**
-     * 刷新属性
-     */
-    refreshInsperctor() {
-        Editor.log("刷新属性");
-
-        const selectedAsset = Editor.Selection.curSelection("node");
-        if (selectedAsset && selectedAsset.length === 0) {
-            Editor.log("没有选中任何资源");
-            return;
-        }
-
-        if (selectedAsset.length > 0) {
-            Editor.Selection.clear('node');
-            Editor.log("开始", new Date().getTime());
-            setTimeout(() => {
-                Editor.log("完成", new Date().getTime());
-                Editor.Selection.select('node', selectedAsset[0]);
-            }, 1000);
-        }
-    },
 
 
     /**

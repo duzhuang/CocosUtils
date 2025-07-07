@@ -12,22 +12,36 @@ module.exports = {
         // execute when package unloaded
     },
 
-    // // 脚本创建时的处理
-    // async createScript(scriptPath, className) {
-
-    //     // 读取模板内容
-    //     const templatePath = path.join(__dirname, 'src/custom-template.ts');
-    //     let content = fs.readFileSync(templatePath, 'utf-8');
-
-    //     // 替换占位符
-    //     content = content.replace(/{{ClassName}}/g, className);
-    //     // 写入文件
-    //     fs.writeFileSync(scriptPath, content, 'utf-8');
-    // },
 
     messages: {
-        "custom-right-click:processCustomScriptTemplete"() {
-            Editor.log("processCustomScriptTemplete");
+        "custom-right-click:processCustomScriptTemplete"() {                      
+
+            const selectedAsset = Editor.Selection.curSelection("asset");
+            if (selectedAsset && selectedAsset.length === 0) {
+                Editor.log("没有选中任何资源");
+                return;
+            }
+
+            const selectedAssetUUID = selectedAsset[0];
+            const assetInfo = Editor.assetdb.assetInfoByUuid(selectedAssetUUID);
+
+            if (!assetInfo) {
+                Editor.log("无法找到资源信息");
+                return;
+            }
+
+            Editor.log("资源信息", assetInfo);
+
+            Editor.assetdb.queryUuidByUrl(assetInfo.url, (error, uuid) => {
+                if (error) {
+                    Editor.log("获取资源 UUID 失败:", error);
+                    return;
+                }
+
+                Editor.log("资源 UUID:", uuid);
+
+                Editor.Ipc.sendToAll('scene:enter-prefab-edit-mode', uuid);
+            });
         }
     }
 };
