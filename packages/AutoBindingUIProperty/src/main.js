@@ -142,13 +142,64 @@ module.exports = {
             return name;
         }
 
-        if (nameList[0] === "btn") {
-            return "cc.Button";
-        }
 
-        if (nameList[0] === "lbl") {
-            return "cc.Label";
-        }
+        const typeMap = {
+            /**节点组件 */
+            node: 'cc.Node',                     
+            /**渲染组件 */
+            dragonBones: 'cc.DragonBones',            
+            lbl: 'cc.Label',
+            lblOut: 'cc.LabelOutline',
+            lblSha: 'cc.LabelShadow',
+            light: 'cc.Light',
+            particle: 'cc.ParticleSystem',
+            rich: 'cc.RichText',
+            graphice: 'cc.Graphics',
+            mask: 'cc.Mask',
+            tiledMap: 'cc.TiledMap',
+            tiledTile: 'cc.TiledTile',
+            spineSk: 'sp.Skeleton',   
+            spr: 'cc.Sprite', 
+            tiledMap: 'cc.TiledMap',
+            tiledTile: 'cc.TiledTile',          
+
+            /**UI 组件 */
+            blockInput: 'cc.BlockInputEvents',      
+            btn: 'cc.Button',
+            canvas: 'cc.Canvas',
+            edit: "cc.EditBox",
+            layout: 'cc.Layout',
+            proBar: 'cc.ProgressBar',
+            sageArea: 'cc.SafeArea',
+            scrollBar: 'cc.Scrollbar',
+            scro: 'cc.ScrollView',        
+            toggle: 'cc.Toggle',
+            toggleCon: 'cc.ToggleContainer',            
+            slider: 'cc.Slider',                                      
+            videoPlayer: 'cc.VideoPlayer',
+            webView: 'cc.WebView',
+            widget: 'cc.Widget',
+
+            /**碰撞组件 */
+            boxCo: 'cc.BoxCollider',
+            circleCo: 'cc.CircleCollider',
+            polygonCo: 'cc.PolygonCollider',            
+
+            /**物理组件 */
+            rigidBody: 'cc.RigidBody',
+            phyBoxCo: "cc.PhysicsBoxCollider",
+            phyCircleCo: "cc.PhysicsCircleCollider",
+            phyPolygonCo: "cc.PhysicsPolygonCollider",
+            phyChainCo_2: "cc.PhysicsChainCollider",
+           
+            /**其它组件 */                
+            animation: 'cc.Animation',
+            audioSource: 'cc.AudioSource',
+            camera: 'cc.Camera',
+            motionStreak: 'cc.MotionStreak'                               
+        };
+        
+        return typeMap[nameList[0]];
     },
 
     /**
